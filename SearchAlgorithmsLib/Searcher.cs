@@ -47,7 +47,7 @@ namespace SearchAlgorithmsLib
             return this.openList.PopTop();
         }
 
-        protected Solution backTrace(IState final)
+        protected ISolution backTrace(IState final)
         {
             List<IState> path = new List<IState>();
             IState state = final;

@@ -17,13 +17,5 @@ namespace SearchAlgorithmsLib
         {
             return string.Join(",", path);
         }
-
-        public List<Point> SolImprint()
-        {
-            List<Point> sols = new List<Point>();
-            for (int i = 0; i < path.Count; i++)
-                sols.Add(path[i].GetState() as Point);
-            return sols;
-        }
     }
 }

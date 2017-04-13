@@ -6,12 +6,23 @@ using System.Threading.Tasks;
 
 namespace SearchAlgorithmsLib
 {
+    /// <summary>
+    /// Implementation of a BestFirstSearcher algorithm using
+    /// an open and closed lists.
+    /// </summary>
     class BestFirstSearcher : Searcher
     {
+        /// <summary>
+        /// Base constructor taken from core Searcher class
+        /// </summary>
         public BestFirstSearcher() : base()
         {
         }
-
+        /// <summary>
+        /// Search in accordance to algorithm, followed step by step.
+        /// </summary>
+        /// <param name="searchable">The "puzzle" which we search through.</param>
+        /// <returns>The solution found to the puzzle according to our BFS algorithm.</returns>
         public override ISolution Search(ISearchable searchable)
         {
 
@@ -49,7 +60,7 @@ namespace SearchAlgorithmsLib
                     }
                 }
             }
-            return null;
+            return null; // no solution found
         }
     }
 }
